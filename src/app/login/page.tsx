@@ -42,7 +42,7 @@ export default function Login() {
     <div className="flex min-h-screen items-center justify-center">
       <main className="flex min-h-[80vh] w-full max-w-3xl flex-col items-center justify-center py-12 px-16 bg-white dark:bg-black sm:items-center rounded-sm m-16">
         <Image
-          className="dark:invert"
+          className="animate-slide-in"
           src="/delivery.png"
           alt="Next.js logo"
           width={100}
