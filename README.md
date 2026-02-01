@@ -18,6 +18,9 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Login using these credentials as all other credentials will be invalid:
+Email: test@test.com
+Password: password123
 
 ## Tech Choices
 
