@@ -26,4 +26,3 @@ The project is made in Next js and Tailwind CSS. Components have been used in th
 ## Improvements 
 
 More animations or styling would have been implemented if more time was available.
->>>>>>> e62af34 (Initial commit from Create Next App)
