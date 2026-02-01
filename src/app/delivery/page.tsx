@@ -13,15 +13,15 @@ export default function Delivery() {
         id="boxes"
         className="flex justify-center items-center mt-6 h-[80vh] flex-wrap"
       >
-        <div className="w-64">
+        <div className="">
           {" "}
           <Box title={`IN_STORE`}/>
         </div>
-        <div className="w-64 ml-2">
+        <div className=" ml-2">
           {" "}
           <Box title={`DELIVERY`}/>
         </div>
-        <div className="w-64 ml-2">
+        <div className=" ml-2">
           {" "}
           <Box title={`CURBSIDE`}/>
         </div>
