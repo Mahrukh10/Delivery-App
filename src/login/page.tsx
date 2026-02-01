@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import toast from "react-hot-toast";
 
 export default function Login() {
   const [email, setEmail] = useState<string>("");
@@ -19,12 +20,11 @@ export default function Login() {
   const handleSignIn = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (email == "test@test.com" && password == "password123")
-      console.log("Signing in with:", {
-        email,
-        password,
-      });
-    else console.log("wrong info");
+    if (email === "test@test.com" && password === "password123") {
+      toast.success("Signed in successfully");
+    } else {
+      toast.error("Invalid credentials");
+    }
 
     // example:
     // call API
