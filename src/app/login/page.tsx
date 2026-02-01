@@ -8,7 +8,7 @@ export default function Login() {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
-const router = useRouter();
+  const router = useRouter();
 
   const validateEmail = (value: string): void => {
     const regex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -23,15 +23,17 @@ const router = useRouter();
     e.preventDefault();
 
     if (email === "test@test.com" && password === "password123") {
+      const userDetails = {
+        email,
+        password,
+      };
+
+      localStorage.setItem("userDetails", JSON.stringify(userDetails));
       toast.success("Signed in successfully");
-      router.push("/delivery")
+      router.push("/delivery");
     } else {
       toast.error("Invalid credentials");
     }
-
-    // example:
-    // call API
-    // router.push("/dashboard")
   };
 
   const isFormValid = email !== "" && password !== "" && error === "";
