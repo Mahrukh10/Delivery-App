@@ -2,11 +2,13 @@
 import { useState } from "react";
 import Image from "next/image";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
+const router = useRouter();
 
   const validateEmail = (value: string): void => {
     const regex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -22,6 +24,7 @@ export default function Login() {
 
     if (email === "test@test.com" && password === "password123") {
       toast.success("Signed in successfully");
+      router.push("/delivery")
     } else {
       toast.error("Invalid credentials");
     }
